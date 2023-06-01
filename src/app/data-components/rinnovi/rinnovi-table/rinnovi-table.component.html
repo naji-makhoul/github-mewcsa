@@ -1,0 +1,31 @@
+<div class="example-container mat-elevation-z8">
+  <div [hidden]="!loading">
+    <app-loading-table-spinner></app-loading-table-spinner>
+  </div>
+  <table [hidden]="loading" mat-table [dataSource]="dataSource" multiTemplateDataRows matSort>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="KeyId">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Id Sks </th>
+      <td mat-cell *matCellDef="let element" class="nome-col"> {{element.KeyId}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Chiave">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Sks Key </th>
+      <td mat-cell *matCellDef="let element" class="nome-col"> {{element.Chiave}} </td>
+    </ng-container>
+
+    <!-- Indirizzo Column -->
+    <ng-container matColumnDef="Timestamp">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Data Rinnovo </th>
+      <td mat-cell *matCellDef="let element"> {{element.Timestamp | date:'yyyy-MM-dd' }} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+  <mat-paginator [pageSizeOptions]="[10, 20, 40]" showFirstLastButtons></mat-paginator>
+
+</div>

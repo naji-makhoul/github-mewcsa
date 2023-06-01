@@ -1,0 +1,121 @@
+.header-buttons {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+  height: auto;
+  display: inline-block;
+  text-align: center;
+  z-index: 1;
+}
+
+.mat-raised-button {
+  margin: 10px;
+  padding: 10px;
+}
+
+.mat-raised-button:hover {
+  background: lightgray;
+}
+
+.site-title {
+  width: 75%;
+  padding: 16px;
+  display: inline-block;
+  margin: 0, auto;
+}
+
+.routes-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-wrapper {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.logo-wrapper {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.table-name {
+  flex-grow: 2;
+}
+
+.welcome {
+  flex-grow: 2;
+  font-size: 18px;
+}
+
+.auth-buttons {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbuttons {
+  width: 50%;
+  display: inline-block;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.mat-stroked-button {
+  margin-right: 10px;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 2px;
+  border-left-width: 0px;
+}
+
+.logo {
+  bottom: 0;
+  max-height: 90px;
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 700px) {
+  .table-name {
+    display: none;
+  }
+  .welcome {
+    display: none;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .header-buttons {
+    position: relative;
+  }
+  
+  .logo-wrapper {
+    order: 1;
+  }
+  .menu-wrapper {
+    order: 2;
+    flex-grow: 0.1;
+  }
+  .auth-buttons {
+    justify-content: flex-end; 
+    order: 3;
+    flex-direction: row;
+    flex-shrink: 1;
+  }
+  .mat-button, .mat-flat-button, .mat-icon-button, .mat-stroked-button {
+    min-width: 0px;
+  }
+  .table-name {
+    display: none;
+  }
+  .welcome {
+    display: none;
+  }
+}

@@ -1,0 +1,34 @@
+.main {
+  width: 95%;
+  margin-top: 140px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mat-list-item {
+  border-bottom: 1px solid black;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .main {
+    width: 100%;
+  }
+  .SS_CREATED {
+    display: none;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .main {
+    margin-top: 20px;
+  }
+}
